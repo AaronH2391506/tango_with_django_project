@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<titler>Rango</title>
+	<title>Rango</title>
     </head>
     
     <body>
-	<h1>Add a Page</h1>
+	<h1>Add a Page to {{ category.name }}</h1>
 	<div>
-	    <form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
+	    <form id="add_page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
 		{% csrf_token %}
 		{% csrf_token %}
 		{% for hidden in form.hidden_fields %}

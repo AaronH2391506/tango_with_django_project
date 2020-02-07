@@ -54,9 +54,9 @@ def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
     except Category.DoesNotExist:
-        Category = None
+        category = None
 
-    if Category is None:
+    if category is None:
         return redirect('/rango/')
 
     form = PageForm()
